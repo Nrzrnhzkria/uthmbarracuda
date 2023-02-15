@@ -36,7 +36,7 @@
             <div class="col-xl-6 col-lg-5">
                 <div class="featured-text text-center text-lg-left">
                     <h4>Who can join?</h4>
-                    <p class="text-black-50 mb-0">Ptryutuyruarticipation is open to UTHM students according to the criteria below.</p>
+                    <p class="text-black-50 mb-0">Participation is open to UTHM students according to the criteria below.</p>
                 </div>
             </div>
         </div>
