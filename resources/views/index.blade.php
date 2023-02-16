@@ -8,7 +8,7 @@
         <div class="d-flex justify-content-center">
             <div class="text-center">
                 <h1 class="mx-auto my-0 text-uppercase">Barracuda</h1>
-                <h2 class="text-white-50 mx-auto mt-2 mb-5">The leading university rowing team in Malaysia</h2>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">The leading university rowing team in Malaysia that was established since 2008.</h2>
                 <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSejTg6Lb0lRfqqPdnC1ZCaX_jRs2DGsftGZ75O3TEN7srX9VA/viewform">Register Now</a>
             </div>
         </div>
@@ -19,9 +19,18 @@
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-lg-8">
-                <h2 class="text-white mb-4">UTHM Rowing Team</h2>
+                <h2 class="text-white mb-4">UTHM Barracuda Rowing Team</h2>
                 <p class="text-white-50">
-                    Established in 2008. First kick-start with only 1 rowing ergomachine.
+                    The UTHM Barracuda Rowing Team is a university rowing team based in Johor, Malaysia. 
+                    We strive to create an atmosphere that supports personal and physical development in our athletes. 
+                    Our athletes enjoy a rigorous training program in which involving teamwork, focus and commitment.
+                    <br><br> 
+                    We are currently ranked leading university team in Malaysia with the tagline "Miles Makes Champion". 
+                    It is a lengthy process that requires patience, perseverance, and a very dedicated athlete and organization 
+                    to make it happen. Hence, we believe we can take you to the next level!
+                </p>
+                <p class="text-white-50">
+                    
                 </p>
             </div>
         </div>
@@ -46,10 +55,10 @@
             <div class="col-lg-6 order-lg-first">
                 <div class="bg-black text-center h-100 project">
                     <div class="d-flex h-100">
-                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                        <div class="project-text w-100 my-auto text-center text-lg-right">
                             <h4 class="text-white">No experience? No problem!</h4>
                             <p class="mb-0 text-white-50">Most of our rowers were trained from zero, to hero.</p>
-                            <hr class="d-none d-lg-block mb-0 ms-0" />
+                            <hr class="d-none d-lg-block mb-0 me-0" />
                         </div>
                     </div>
                 </div>
