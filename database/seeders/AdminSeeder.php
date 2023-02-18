@@ -16,10 +16,13 @@ class AdminSeeder extends Seeder
     {
         $admin = [
             [
-                'name' => 'Admin',
+                'first_name' => 'Zarina',
+                'last_name' => 'Zakaria',
                 'email' => 'nrz.work@gmail.com',
                 'password' => bcrypt('password'),
                 'is_admin' => true,
+                'is_active' => true,
+                'is_highperformance' => true
             ]
         ];
 

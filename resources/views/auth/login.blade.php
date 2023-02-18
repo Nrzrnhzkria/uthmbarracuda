@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+    Log In | 
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center pt-5">
@@ -7,9 +11,9 @@
         <div class="col-md-6 text-center">
             <form class="form-signin" method="POST" action="{{ route('login') }}">
                 @csrf
-                <img class="mb-4" src="{{ asset('frontend/assets/logo.png') }}" alt="" width="100">
+                <img class="mb-4" src="{{ asset('frontend/assets/logo.png') }}" alt="logo" width="100">
 
-                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                <h1 class="h3 mb-3 font-weight-normal">Please log in</h1>
 
                 <input type="email" id="email" class="form-control @error('email') is-invalid @enderror" placeholder="{{ __('Email Address') }}" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                 <i class="glyphicon glyphicon-user form-control-feedback"></i>

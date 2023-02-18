@@ -17,7 +17,9 @@ Route::get('/', function () {
     return view('index');
 });
 
-// Route::get('/admin', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+Route::get('/registration-form', [\App\Http\Controllers\Admin\RegistrationController::class, 'index']);
+Route::post('/store-form', [\App\Http\Controllers\Admin\RegistrationController::class, 'store']);
+Route::get('/registration-success', [\App\Http\Controllers\Admin\RegistrationController::class, 'success']);
 
 Route::group(['middleware' => ['auth', 'isAdmin'], 'prefix' => 'dashboard'], function() {
     Route::get('/', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');

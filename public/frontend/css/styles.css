@@ -3674,6 +3674,10 @@ textarea.form-control-lg {
   }
 }
 
+.border-top-danger {
+  border-top: 0.25rem solid #DC143C !important;
+}
+
 .dropup,
 .dropend,
 .dropdown,

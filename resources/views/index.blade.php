@@ -9,7 +9,7 @@
             <div class="text-center">
                 <h1 class="mx-auto my-0 text-uppercase">Barracuda</h1>
                 <h2 class="text-white-50 mx-auto mt-2 mb-5">The leading university rowing team in Malaysia that was established since 2008.</h2>
-                <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSejTg6Lb0lRfqqPdnC1ZCaX_jRs2DGsftGZ75O3TEN7srX9VA/viewform">Register Now</a>
+                <a class="btn btn-primary" href="/registration-form">Register Now</a>
             </div>
         </div>
     </div>
@@ -105,7 +105,7 @@
             <div class="col-md-10 col-lg-8 mx-auto text-center">
                 <i class="fa-regular fa-address-card fa-3x mb-2 text-white"></i>
                 <h2 class="text-white mb-5">Meets all the above criteria?</h2>
-                <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSejTg6Lb0lRfqqPdnC1ZCaX_jRs2DGsftGZ75O3TEN7srX9VA/viewform">Register Now</a>
+                <a class="btn btn-primary" href="/registration-form">Register Now</a>
             </div>
         </div>
     </div>
