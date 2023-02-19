@@ -128,22 +128,6 @@
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="years" class="form-label">Years of study</label>
-                            <select class="form-select form-select-sm @error('years') is-invalid @enderror" aria-label="Default select example" name="years" required>
-                                <option selected disabled>-- Select --</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="Others">Others</option>
-                            </select>
-                            @error('years')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                        <div class="mb-3">
                             <label for="weight" class="form-label">Weight (KG)</label>
                             <input type="text" class="form-control form-control-sm @error('weight') is-invalid @enderror" placeholder="Eg. 59.3" name="weight" required>
                             @error('weight')

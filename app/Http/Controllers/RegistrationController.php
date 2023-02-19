@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -27,11 +27,10 @@ class RegistrationController extends Controller
         AthleteDetails::create([
             'matric_no' => $request->matric_no,
             'ic_no' => $request->ic_no,
-            'phone_no' => $request->phone_no,
+            'phone_no' => '6' . $request->phone_no,
             'email' => $request->email,
             'gender' => $request->gender,
             'faculty' => $request->faculty,
-            'years' => $request->years,
             'weight' => $request->weight,
             'height' => $request->height,
             'experience' => $request->experience,

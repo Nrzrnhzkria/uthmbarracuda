@@ -16,7 +16,6 @@ class AthleteDetails extends Model
         'phone_no',
         'gender',
         'faculty',
-        'years',
         'weight',
         'height',
         'experience',

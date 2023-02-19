@@ -20,7 +20,6 @@ class CreateAthleteDetailsTable extends Migration
             $table->string('phone_no');
             $table->string('gender');
             $table->string('faculty');
-            $table->string('years');
             $table->string('weight');
             $table->string('height');
             $table->string('experience');
