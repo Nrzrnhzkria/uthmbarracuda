@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\AthleteDetails;
+use App\Models\TestResult;
+use App\Models\Test;
 
 class AthleteController extends Controller
 {    
@@ -106,6 +108,15 @@ class AthleteController extends Controller
             'message' => 'Athlete has been deleted successfully.',
             'type' => 'danger'
         ]);
+    }
+
+    public function view_performance($user_id){
+        $users = User::where('id', $user_id)->first();
+        $athlete_details = AthleteDetails::where('user_id', $users->id)->first();
+        $test_results = TestResult::orderBy('id', 'desc')->where('matric_no', $athlete_details->matric_no)->paginate(15);
+        $tests = Test::all();
+
+        return view('admin.athlete.view_performance', compact('users', 'test_results', 'tests'));
     }
 
 }

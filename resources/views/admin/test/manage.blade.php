@@ -73,15 +73,15 @@
                         <td>{{ $test->title }}</td>
                         <td>
                             <div class="form-group row">
-                                <div class="col-8">
+                                <div class="col-8 p-0">
                                     <input type="text" id="copy_{{ $test->test_id }}" value="{{ $test->link }}" class="form-control form-control-sm" readonly>
                                 </div> 
-                                <div class="col-4">
-                                    <button onclick="copyToClipboard('copy_{{ $test->test_id }}')" class="btn btn-sm btn-secondary"><i class="bi bi-clipboard"></i></button>
+                                <div class="col-4 p-0">
+                                    <button onclick="copyToClipboard('copy_{{ $test->test_id }}')" class="btn p-1"><i class="bi bi-clipboard"></i></button>
                                 </div>
                             </div>                      
                         </td>
-                        <td>{{ date('d-m-Y', strtotime($test->date)) }}</td>
+                        <td>{{ date('d M Y', strtotime($test->date)) }}</td>
                         <td class="text-center">
                             <a href="{{ url('view-results') }}/{{ $test->test_id }}" class="btn btn-sm btn-dark"><i class="bi bi-chevron-right"></i></a>
                             <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modal{{ $test->test_id }}"><i class="bi bi-trash"></i></button>

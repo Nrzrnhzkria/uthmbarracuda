@@ -588,6 +588,11 @@ pre code {
   margin-right: -0.75rem;
   margin-left: -0.75rem;
 }
+.row-fluid{
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+}
 
 .no-gutters {
   margin-right: 0;

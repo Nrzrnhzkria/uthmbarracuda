@@ -18,7 +18,7 @@ class TestSeeder extends Seeder
             [
                 'test_id' => 'T001',
                 'title' => '2000 m',
-                'date' => '19/02/2023',
+                'date' => '2023-02-22',
                 'link' => 'http://127.0.0.1:8000/test-form/T001'
             ]
         ];

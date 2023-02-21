@@ -38,17 +38,10 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-            aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link collapsed" href="/manage-test">
             <i class="fas fa-clipboard-list"></i>
             <span>Performance Test</span>
         </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="/manage-test">Manage Test</a>
-                <a class="collapse-item" href="/test-results">Results</a>
-            </div>
-        </div>
     </li>
 
     <!-- Divider -->
