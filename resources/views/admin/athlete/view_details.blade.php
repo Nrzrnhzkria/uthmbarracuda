@@ -150,6 +150,8 @@
                                         </div>
                                     </div>
                                     
+                                    @if(Auth::user()->is_admin == 0)
+                                    @else
                                     <div class="form-group row">
                                         <label for="text" class="col-4 col-form-label">High Performance Athlete</label>
                                         <div class="col-8 pt-2">
@@ -199,6 +201,7 @@
                                             @endif
                                         </div>
                                     </div>
+                                    @endif
 
                                     <div class="form-group text-right row">
                                         <div class="offset-4 col-8">

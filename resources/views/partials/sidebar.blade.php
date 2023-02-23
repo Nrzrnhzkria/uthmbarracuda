@@ -20,6 +20,8 @@
     <!-- Divider -->
     <hr class="sidebar-divider">
 
+    @if(Auth::user()->is_admin == 0)
+    @else
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -35,6 +37,7 @@
             </div>
         </div>
     </li>
+    @endif
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
@@ -44,6 +47,8 @@
         </a>
     </li>
 
+    @if(Auth::user()->is_admin == 0)
+    @else
     <!-- Divider -->
     <hr class="sidebar-divider">
 
@@ -54,6 +59,7 @@
             <span>Administrator</span>
         </a>
     </li>
+    @endif
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
