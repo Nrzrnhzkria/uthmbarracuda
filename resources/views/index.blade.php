@@ -99,7 +99,7 @@
 
 </section>
 <!-- Register -->
-<section class="register-section bg-black" id="register">
+<section class="register-section bg-black" id="contact">
     <div class="container p-4 px-lg-5">
         <div class="row gx-4 gx-lg-5">
             <div class="col-md-10 col-lg-8 mx-auto text-center">
@@ -111,7 +111,7 @@
     </div>
 </section>
 <!-- Contact-->
-<section class="contact-section bg-black" id="contact">
+<section class="contact-section bg-black">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5">
             <div class="col-md-4 mb-3 mb-md-0">
@@ -133,7 +133,7 @@
                         <i class="fas fa-envelope text-primary mb-2"></i>
                         <h4 class="text-uppercase m-0">Email</h4>
                         <hr class="my-4 mx-auto" />
-                        <div class="small text-black-50"><a href="uthmbarracuda@gmail.com" class="text-decoration-none">uthmbarracuda[at]gmail.com</a></div>
+                        <div class="small text-black-50"><a href="mailto:uthmbarracuda@gmail.com" class="text-decoration-none">uthmbarracuda[at]gmail.com</a></div>
                     </div>
                 </div>
             </div>

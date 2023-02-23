@@ -15,7 +15,7 @@
             <p class="pt-5">Please join our group whatsapp to get notification for the latest update.</p>
             <a href="https://chat.whatsapp.com/FF6AsHIsBbX1kJzwgzpEgc" class="btn btn-primary"><i class="fab fa-whatsapp"></i>&nbsp; Group Whatsapp</a>
             <br><br>
-            <a href="http://uthmbarracuda.ezyro.com/" class="pt-2">Back to main page</a>
+            <a href="/" class="pt-2">Back to main page</a>
         </div>
     </div>
 

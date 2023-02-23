@@ -41,7 +41,7 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="h4 font-weight-bold text-uppercase mb-3">
-                                    Test Submission Form
+                                    Result For {{ $test->title }}
                                 </div>
                                 <hr>
                                 <div class="text-xs mb-0">
@@ -82,7 +82,7 @@
                         <div class="mb-3">
                             <label for="img_name" class="form-label">Proof of Result</label>
                             <input class="form-control form-control-sm" name="image" type="file" required>
-                            <em style="font-size: 10pt;">File format: png, jpeg (Image size must below 1MB)</em><br>
+                            <em style="font-size: 10pt;">File format: png, jpg, heic (Image size must below 1MB)</em><br>
                         </div>
                         
                         <div class="text-end">

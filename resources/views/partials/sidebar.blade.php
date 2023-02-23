@@ -49,34 +49,18 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#administrator"
-            aria-expanded="true" aria-controls="administrator">
-            <i class="fa fa-users" aria-hidden="true"></i>
+        <a class="nav-link collapsed" href="/administrator">
+            <i class="bi bi-file-person-fill"></i>
             <span>Administrator</span>
         </a>
-        <div id="administrator" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Custom Components:</h6>
-                <a class="collapse-item" href="buttons.html">Buttons</a>
-                <a class="collapse-item" href="cards.html">Cards</a>
-            </div>
-        </div>
     </li>
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#template"
-            aria-expanded="true" aria-controls="template">
+        <a class="nav-link collapsed" href="/files">
             <i class="fas fa-fw fa-folder"></i>
-            <span>Template</span>
+            <span>Files</span>
         </a>
-        <div id="template" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Custom Components:</h6>
-                <a class="collapse-item" href="buttons.html">Buttons</a>
-                <a class="collapse-item" href="cards.html">Cards</a>
-            </div>
-        </div>
     </li>
 
     <!-- Divider -->

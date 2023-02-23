@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title>@yield('title') | UTHM Barracuda</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('frontend/assets/logo.png') }}" />
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('backend/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -20,6 +21,7 @@
     <!-- Custom styles for this template-->
     <link href="{{ asset('backend/css/sb-admin-2.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
 </head>
 

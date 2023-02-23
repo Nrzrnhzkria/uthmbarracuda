@@ -58,7 +58,7 @@ class AthleteController extends Controller
             AthleteDetails::create([
                 'matric_no' => $request->matric_no,
                 'ic_no' => $request->ic_no,
-                'phone_no' => '6' . $request->phone_no,
+                'phone_no' => $request->phone_no,
                 'gender' => $request->gender,
                 'faculty' => $request->faculty,
                 'weight' => $request->weight,
@@ -79,7 +79,7 @@ class AthleteController extends Controller
 
             $athlete_details->matric_no = $request->matric_no;
             $athlete_details->ic_no = $request->ic_no;
-            $athlete_details->phone_no = '6' . $request->phone_no;
+            $athlete_details->phone_no = $request->phone_no;
             $athlete_details->gender = $request->gender;
             $athlete_details->faculty = $request->faculty;
             $athlete_details->weight = $request->weight;
