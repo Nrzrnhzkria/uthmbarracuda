@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Model;
+use App\Models\AthleteDetails;
 
 class User extends Authenticatable
 {
@@ -18,10 +20,13 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'user_id',
         'first_name',
         'last_name',
         'email',
         'password',
+        'is_admin',
+        'is_coach',
     ];
 
     /**
@@ -42,4 +47,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // Define the athlete_details relationship as a hasOne relationship
+    public function athlete_details()
+    {
+        return $this->hasOne(AthleteDetails::class);
+    }
 }

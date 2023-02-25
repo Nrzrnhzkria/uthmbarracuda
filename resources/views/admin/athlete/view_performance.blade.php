@@ -17,8 +17,8 @@
         <div class="row pb-4">
             <div class="col-md-3 pb-2">
                 <div class="list-group ">
-                    <a href="{{ url('view-athlete') }}/{{ $users->id }}" class="list-group-item list-group-item-action">Personal Details</a>
-                    <a href="{{ url('view-performance') }}/{{ $users->id }}" class="list-group-item list-group-item-secondary list-group-item-action active">Performance</a>    
+                    <a href="{{ url('view-athlete') }}/{{ $users->user_id }}" class="list-group-item list-group-item-action">Personal Details</a>
+                    <a href="{{ url('view-performance') }}/{{ $users->user_id }}" class="list-group-item list-group-item-secondary list-group-item-action active">Performance</a>    
                 </div> 
             </div>
 

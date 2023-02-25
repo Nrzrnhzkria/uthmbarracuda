@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\AthleteDetails;
 use App\Models\TestResult;
 use App\Models\Test;
+use Rap2hpoutre\FastExcel\FastExcel;
 
 class AthleteController extends Controller
 {    
@@ -16,14 +17,8 @@ class AthleteController extends Controller
         $this->middleware('auth');
     }
 
-    public function all(){
-        $users = User::orderBy('id', 'desc')->paginate(15);
-
-        return view('admin.athlete.all.view', compact('users'));
-    }
-
     public function active(){
-        $users = User::where('is_active', true)->orderBy('id', 'desc')->paginate(15);
+        $users = User::where('is_active', true)->where('is_coach', false)->orderBy('id', 'desc')->paginate(15);
 
         return view('admin.athlete.active.view', compact('users'));
     }
@@ -34,17 +29,23 @@ class AthleteController extends Controller
         return view('admin.athlete.high_performance.view', compact('users'));
     }
 
+    public function inactive(){
+        $users = User::where('is_active', false)->orderBy('id', 'desc')->paginate(15);
+
+        return view('admin.athlete.inactive.view', compact('users'));
+    }
+
     public function view_details($user_id){
-        $user = User::where('id', $user_id)->first();
-        $athlete_details = AthleteDetails::where('user_id', $user->id)->first();
+        $user = User::where('user_id', $user_id)->first();
+        $athlete_details = AthleteDetails::where('user_id', $user->user_id)->first();
 
         return view('admin.athlete.view_details', compact('user', 'athlete_details'));
     }
 
     public function update_details($user_id, Request $request){     
 
-        $user = User::where('id', $user_id)->first();
-        $athlete_details = AthleteDetails::where('user_id', $user->id)->first();
+        $user = User::where('user_id', $user_id)->first();
+        $athlete_details = AthleteDetails::where('user_id', $user->user_id)->first();
 
         if($athlete_details == NULL){
 
@@ -98,8 +99,8 @@ class AthleteController extends Controller
 
     public function destroy($user_id)
     {
-        $user = User::where('id', $user_id)->first();
-        $athlete_details = AthleteDetails::where('user_id', $user->id)->first();
+        $user = User::where('user_id', $user_id)->first();
+        $athlete_details = AthleteDetails::where('user_id', $user->user_id)->first();
 
         $athlete_details->delete();
         $user->delete();
@@ -111,12 +112,69 @@ class AthleteController extends Controller
     }
 
     public function view_performance($user_id){
-        $users = User::where('id', $user_id)->first();
-        $athlete_details = AthleteDetails::where('user_id', $users->id)->first();
+        $users = User::where('user_id', $user_id)->first();
+        $athlete_details = AthleteDetails::where('user_id', $users->user_id)->first();
         $test_results = TestResult::orderBy('id', 'desc')->where('matric_no', $athlete_details->matric_no)->paginate(15);
         $tests = Test::all();
 
         return view('admin.athlete.view_performance', compact('users', 'test_results', 'tests'));
+    }
+
+    public function export_active(){
+
+        $athletes = User::with('athlete_details')->orderBy('first_name', 'asc')->where('is_active', true)->where('is_coach', false)->get();
+        
+        $data = $athletes->map(function ($athlete) {
+            return [
+                'NAME' => $athlete->first_name . ' ' . $athlete->last_name,
+                'EMAIL' => $athlete->email,
+                'MATRIC NO' => optional($athlete->athlete_details)->matric_no,
+                'IC NO' => optional($athlete->athlete_details)->ic_no,
+                'PHONE NO' => optional($athlete->athlete_details)->phone_no,
+                'GENDER' => optional($athlete->athlete_details)->gender,
+                'FACULTY' => optional($athlete->athlete_details)->faculty,
+            ];
+        });
+        
+        return (new FastExcel($data))->download('athletes.xlsx');
+    }
+
+    public function export_highperformance(){
+
+        $athletes = User::with('athlete_details')->orderBy('first_name', 'asc')->where('is_highperformance', true)->get();
+        
+        $data = $athletes->map(function ($athlete) {
+            return [
+                'NAME' => $athlete->first_name . ' ' . $athlete->last_name,
+                'EMAIL' => $athlete->email,
+                'MATRIC NO' => optional($athlete->athlete_details)->matric_no,
+                'IC NO' => optional($athlete->athlete_details)->ic_no,
+                'PHONE NO' => optional($athlete->athlete_details)->phone_no,
+                'GENDER' => optional($athlete->athlete_details)->gender,
+                'FACULTY' => optional($athlete->athlete_details)->faculty,
+            ];
+        });
+        
+        return (new FastExcel($data))->download('athletes.xlsx');
+    }
+
+    public function export_inactive(){
+
+        $athletes = User::with('athlete_details')->orderBy('first_name', 'asc')->where('is_active', false)->get();
+        
+        $data = $athletes->map(function ($athlete) {
+            return [
+                'NAME' => $athlete->first_name . ' ' . $athlete->last_name,
+                'EMAIL' => $athlete->email,
+                'MATRIC NO' => optional($athlete->athlete_details)->matric_no,
+                'IC NO' => optional($athlete->athlete_details)->ic_no,
+                'PHONE NO' => optional($athlete->athlete_details)->phone_no,
+                'GENDER' => optional($athlete->athlete_details)->gender,
+                'FACULTY' => optional($athlete->athlete_details)->faculty,
+            ];
+        });
+        
+        return (new FastExcel($data))->download('athletes.xlsx');
     }
 
 }

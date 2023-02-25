@@ -17,8 +17,8 @@
         <div class="row pb-4">
             <div class="col-md-3 pb-2">
                 <div class="list-group ">
-                    <a href="{{ url('view-athlete') }}/{{ $user->id }}" class="list-group-item list-group-item-secondary list-group-item-action active">Personal Details</a>
-                    <a href="{{ url('view-performance') }}/{{ $user->id }}" class="list-group-item list-group-item-action">Performance</a>    
+                    <a href="{{ url('view-athlete') }}/{{ $user->user_id }}" class="list-group-item list-group-item-secondary list-group-item-action active">Personal Details</a>
+                    <a href="{{ url('view-performance') }}/{{ $user->user_id }}" class="list-group-item list-group-item-action">Performance</a>    
                 </div> 
             </div>
 
@@ -34,7 +34,7 @@
 
                         <div class="row">
                             <div class="col-md-12">
-                                <form action="{{ url('update-athlete') }}/{{ $user->id }}" method="post">
+                                <form action="{{ url('update-athlete') }}/{{ $user->user_id }}" method="post">
                                     @csrf
                                     <div class="form-group row">
                                         <label for="name" class="col-4 col-form-label">First Name</label> 
@@ -209,9 +209,9 @@
                                                 <i class="bi bi-save2 pr-1"></i> Update Profile
                                             </button>
                                             
-                                            <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modal{{ $user->id }}"><i class="bi bi-trash"></i></button>
+                                            <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modal{{ $user->user_id }}"><i class="bi bi-trash"></i></button>
                                             <!-- Modal -->
-                                            <div class="modal fade" id="modal{{ $user->id }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal fade" id="modal{{ $user->user_id }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
@@ -228,7 +228,7 @@
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
-                                                            <a class="btn btn-sm btn-danger" href="{{ url('delete-athlete') }}/{{ $user->id }}">Delete</a>
+                                                            <a class="btn btn-sm btn-danger" href="{{ url('delete-athlete') }}/{{ $user->user_id }}">Delete</a>
                                                         </div>
                                                     </div>
                                                 </div>

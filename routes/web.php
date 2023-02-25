@@ -26,13 +26,20 @@ Route::get('/registration-success', [\App\Http\Controllers\RegistrationControlle
 Auth::routes();
 Route::get('/dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'index']);
 // athletes
-Route::get('/all-athletes', [\App\Http\Controllers\Admin\AthleteController::class, 'all']);
 Route::get('/active-athletes', [\App\Http\Controllers\Admin\AthleteController::class, 'active']);
 Route::get('/high-performance-athletes', [\App\Http\Controllers\Admin\AthleteController::class, 'high_performance']);
+Route::get('/inactive-athletes', [\App\Http\Controllers\Admin\AthleteController::class, 'inactive']);
 Route::get('/view-athlete/{user_id}', [\App\Http\Controllers\Admin\AthleteController::class, 'view_details']);
 Route::post('/update-athlete/{user_id}', [\App\Http\Controllers\Admin\AthleteController::class, 'update_details']);
 Route::get('/delete-athlete/{user_id}', [\App\Http\Controllers\Admin\AthleteController::class, 'destroy']);
 Route::get('/view-performance/{user_id}', [\App\Http\Controllers\Admin\AthleteController::class, 'view_performance']);
+Route::get('/export-active', [\App\Http\Controllers\Admin\AthleteController::class, 'export_active']);
+Route::get('/export-highperformance', [\App\Http\Controllers\Admin\AthleteController::class, 'export_highperformance']);
+Route::get('/export-inactive', [\App\Http\Controllers\Admin\AthleteController::class, 'export_inactive']);
+// coaches
+Route::get('/view-coaches', [\App\Http\Controllers\Admin\CoachController::class, 'view']);
+Route::post('/store-coach', [\App\Http\Controllers\Admin\CoachController::class, 'store']);
+Route::get('/delete-coach/{user_id}', [\App\Http\Controllers\Admin\CoachController::class, 'destroy']);
 // tests
 Route::get('/manage-test', [\App\Http\Controllers\Admin\TestController::class, 'manage']);
 Route::post('/store-test', [\App\Http\Controllers\Admin\TestController::class, 'store_test']);

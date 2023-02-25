@@ -31,9 +31,9 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="/all-athletes">All</a>
                 <a class="collapse-item" href="/active-athletes">Active</a>
                 <a class="collapse-item" href="/high-performance-athletes">High Performance</a>
+                <a class="collapse-item" href="/inactive-athletes">Inactive</a>
             </div>
         </div>
     </li>
@@ -41,8 +41,16 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
+        <a class="nav-link collapsed" href="/view-coaches">
+            <i class="fa fa-users"></i>
+            <span>Coaches</span>
+        </a>
+    </li>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
         <a class="nav-link collapsed" href="/manage-test">
-            <i class="fas fa-clipboard-list"></i>
+            <i class="bi bi-list-check pr-1"></i>
             <span>Performance Test</span>
         </a>
     </li>
@@ -55,7 +63,7 @@
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="/administrator">
-            <i class="bi bi-file-person-fill"></i>
+            <i class="bi bi-file-person-fill pr-1"></i>
             <span>Administrator</span>
         </a>
     </li>

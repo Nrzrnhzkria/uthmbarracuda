@@ -9,6 +9,7 @@
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Active Athletes</h1>
+    <a href="/export-active" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download pr-2"></i>Export</a>
 </div>
 
 <!-- Content Row -->
@@ -33,7 +34,7 @@
                         <td>{{ $user->first_name }}</td>
                         <td>{{ $user->last_name }}</td>
                         <td class="text-center">
-                            <a href="{{ url('view-athlete') }}/{{ $user->id }}" class="btn btn-sm btn-dark"><i class="bi bi-chevron-right"></i></a>
+                            <a href="{{ url('view-athlete') }}/{{ $user->user_id }}" class="btn btn-sm btn-dark"><i class="bi bi-chevron-right"></i></a>
                         </td>
                     </tr>                
                     @endforeach

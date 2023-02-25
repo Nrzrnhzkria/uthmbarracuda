@@ -16,6 +16,7 @@ class RegistrationController extends Controller
     public function store(Request $request)
     {
         User::create([
+            'user_id' => 'ID' . uniqid(),
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'email' => $request->email,
@@ -35,7 +36,7 @@ class RegistrationController extends Controller
             'height' => $request->height,
             'experience' => $request->experience,
             'aspirations' => $request->aspirations,
-            'user_id' => $user->id,
+            'user_id' => $user->user_id,
         ]);  
         
         return redirect('/registration-success');

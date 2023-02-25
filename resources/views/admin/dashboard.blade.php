@@ -58,12 +58,12 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
-                            Inactive Athletes
+                            Coaches
                         </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $inactive_users }}</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $coaches }}</div>
                     </div>
                     <div class="col-auto">
-                        <i class="bi bi-person-x-fill fa-2x text-gray-300"></i>
+                        <i class="fas fa-users fa-2x text-gray-300"></i>
                     </div>
                 </div>
             </div>
@@ -113,9 +113,9 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($users as $key => $user)
+                            @foreach ($users as $user)
                             @foreach ($athlete_details as $athlete_detail)
-                            @if ($athlete_detail->user_id == $user->id)
+                            @if ($athlete_detail->user_id == $user->user_id)
                             <tr>
                                 <th scope="row">{{ ++$i }}</th>
                                 <td>{{ $user->first_name }} {{ $user->last_name }}</td>

@@ -24,8 +24,7 @@ class CreateAthleteDetailsTable extends Migration
             $table->string('height');
             $table->string('experience');
             $table->string('aspirations');
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->string('user_id');
             $table->timestamps();
         });
     }

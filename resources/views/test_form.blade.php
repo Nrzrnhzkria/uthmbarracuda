@@ -64,7 +64,7 @@
                                 <option selected disabled>-- Select --</option>
                                 @foreach ($users as $user)  
                                 @foreach ($athlete_details as $athlete_detail)  
-                                @if ($athlete_detail->user_id == $user->id)
+                                @if ($athlete_detail->user_id == $user->user_id)
                                     <option value="{{ $athlete_detail->matric_no }}">{{ $athlete_detail->matric_no }}</option>
                                 @endif                                    
                                 @endforeach

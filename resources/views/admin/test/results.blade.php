@@ -35,7 +35,7 @@
                     @foreach ($test_results as $key => $test_result)
                     @foreach ($users as $user)  
                     @foreach ($athlete_details as $athlete_detail) 
-                    @if ($user->id == $athlete_detail->user_id)
+                    @if ($user->user_id == $athlete_detail->user_id)
                     @if ($athlete_detail->matric_no == $test_result->matric_no)
                     <tr>
                         <th scope="row">{{ $test_results->firstItem() + $key }}</th>

@@ -19,10 +19,10 @@
             @csrf
             <div class="form-group row">
                 <div class="col-4">
-                    <select class="form-select form-select-sm" name="id">
+                    <select class="form-select form-select-sm" name="user_id" required>
                         <option selected disabled>-- Select --</option>
                         @foreach ($users as $user)  
-                            <option value="{{ $user->id }}">{{ $user->first_name }} {{ $user->last_name }}</option>
+                            <option value="{{ $user->user_id }}">{{ $user->first_name }} {{ $user->last_name }}</option>
                         @endforeach
                     </select>
                 </div> 
@@ -58,9 +58,9 @@
                         <td class="text-center">
                             @if ($admin->id == 1)
                             @else  
-                                <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modal{{ $admin->id }}"><i class="bi bi-trash"></i></button>
+                                <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#modal{{ $admin->user_id }}"><i class="bi bi-trash"></i></button>
                                 <!-- Modal -->
-                                <div class="modal fade" id="modal{{ $admin->id }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="modal{{ $admin->user_id }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -74,7 +74,7 @@
                                                     <ul>
                                                         <li>
                                                             <p>{{ $admin->first_name }} {{ $admin->last_name }}</p>
-                                                            <input type="hidden" name="remove_id" value="{{ $admin->id }}">
+                                                            <input type="hidden" name="remove_id" value="{{ $admin->user_id }}">
                                                         </li>
                                                     </ul>
                                                 </div>

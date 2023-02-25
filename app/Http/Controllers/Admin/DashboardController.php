@@ -16,12 +16,12 @@ class DashboardController extends Controller
 
     public function index(){
 
-        $users = User::where('is_active', 1)->orderby('first_name', 'asc')->get();
+        $users = User::where('is_active', 1)->where('is_coach', 0)->orderby('first_name', 'asc')->get();
         $athlete_details = AthleteDetails::all();
 
         $active_users = count($users);
         $high_users = User::where('is_active', 1)->where('is_highperformance', 1)->count();
-        $inactive_users = User::where('is_active', 0)->count();
+        $coaches = User::where('is_coach', 1)->count();
         $admin_users = User::where('is_admin', 1)->count();
 
         // $active_men = AthleteDetails::where('gender', 'Men')->count();
@@ -30,6 +30,6 @@ class DashboardController extends Controller
 
         $i = 0;
 
-        return view('admin.dashboard', compact('active_users', 'high_users', 'inactive_users', 'admin_users', 'users', 'athlete_details', 'i'));
+        return view('admin.dashboard', compact('active_users', 'high_users', 'coaches', 'admin_users', 'users', 'athlete_details', 'i'));
     }
 }

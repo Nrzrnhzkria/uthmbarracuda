@@ -23,7 +23,7 @@ class AdminController extends Controller
 
     public function store_admin(Request $request){     
 
-        $user = User::where('id', $request->id)->first();
+        $user = User::where('user_id', $request->user_id)->first();
 
         $user->is_admin = 1;
         $user->save();
@@ -36,7 +36,7 @@ class AdminController extends Controller
 
     public function remove_admin(Request $request){     
 
-        $user = User::where('id', $request->remove_id)->first();
+        $user = User::where('user_id', $request->remove_id)->first();
 
         $user->is_admin = 0;
         $user->save();

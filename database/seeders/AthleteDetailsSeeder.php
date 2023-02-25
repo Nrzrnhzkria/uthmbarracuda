@@ -25,7 +25,7 @@ class AthleteDetailsSeeder extends Seeder
                 'height' => '162',
                 'experience' => 'International',
                 'aspirations' => 'GOAT',
-                'user_id' => '1',
+                'user_id' => 'ID001',
             ]
         ];
 
